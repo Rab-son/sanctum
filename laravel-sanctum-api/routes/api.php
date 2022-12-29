@@ -24,7 +24,7 @@ Route::resource('products', ProductController::class);
 
 
 
-Route::middleware('auth:sanctum')->get('/user', function () {
+Route::group(['middleware'=> ['auth:sanctum']], function () {
     Route::get('products/search/{name}', [ProductController::class, 'search']);
 });
 
