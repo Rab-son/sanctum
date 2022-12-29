@@ -20,7 +20,7 @@ Route::get('/products',function(){
 });
 
 
-Route::get('/products',function(){
+Route::post('/products',function(){
     return Product::create([
         'name' => 'Product One',
         'slug' => 'product-one',
