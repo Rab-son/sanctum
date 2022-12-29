@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Product;
+use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,11 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/products',function(){
-    return Product::all();
-});
+Route::get('/products',[ProductController::class, 'index']);
 
-
+/*
 Route::post('/products',function(){
     return Product::create([
         'name' => 'Product One',
@@ -27,7 +25,7 @@ Route::post('/products',function(){
         'description' => 'This is product one',
         'price' => '99.99'
     ]);
-});
+});*/
 
 
 
